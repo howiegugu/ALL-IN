@@ -53,18 +53,18 @@
             <scope>test</scope>
         </dependency>
 
-<!--        junit-vintage-engine 是JUnit 5中的一个测试引擎，它的作用是为了向后兼容JUnit 4和JUnit 3中的测试代码。
-当您在使用JUnit 5时，如果您的测试代码仍然是使用旧版JUnit编写的（即JUnit 4或JUnit 3），则您可以使用 junit-vintage-engine 测试引擎来运行这些测试代码。-->
+        <!--        junit-vintage-engine 是JUnit 5中的一个测试引擎，它的作用是为了向后兼容JUnit 4和JUnit 3中的测试代码。
+        当您在使用JUnit 5时，如果您的测试代码仍然是使用旧版JUnit编写的（即JUnit 4或JUnit 3），则您可以使用 junit-vintage-engine 测试引擎来运行这些测试代码。-->
 
-<!--        junit-vintage-engine 与JUnit Jupiter测试引擎一起提供。
-JUnit Jupiter测试引擎用于运行JUnit 5中的新测试代码，而 junit-vintage-engine 用于运行旧版本的JUnit测试代码。-->
+        <!--        junit-vintage-engine 与JUnit Jupiter测试引擎一起提供。
+        JUnit Jupiter测试引擎用于运行JUnit 5中的新测试代码，而 junit-vintage-engine 用于运行旧版本的JUnit测试代码。-->
 
-<!--        使用 junit-vintage-engine 测试引擎，您可以在JUnit 5中
-运行传统的JUnit 4和JUnit 3测试，并且可以利用JUnit 5的新特性和功能，比如扩展模型和动态测试生成。-->
+        <!--        使用 junit-vintage-engine 测试引擎，您可以在JUnit 5中
+        运行传统的JUnit 4和JUnit 3测试，并且可以利用JUnit 5的新特性和功能，比如扩展模型和动态测试生成。-->
 
 
-<!-- Starting with Spring Boot 2.4, JUnit 5’s vintage engine has been removed
- from spring-boot-starter-test-->
+        <!-- Starting with Spring Boot 2.4, JUnit 5’s vintage engine has been removed
+         from spring-boot-starter-test-->
         <dependency>
             <groupId>org.junit.vintage</groupId>
             <artifactId>junit-vintage-engine</artifactId>
@@ -76,7 +76,29 @@ JUnit Jupiter测试引擎用于运行JUnit 5中的新测试代码，而 junit-vi
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-launcher</artifactId>
+            <version>1.7.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+
+<!--        使用junit 所需要引入的包-->
+<!--        <dependency>-->
+<!--            <groupId>org.junit.jupiter</groupId>-->
+<!--            <artifactId>junit-jupiter-engine</artifactId>-->
+<!--            <version>5.9.2</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+
     </dependencies>
+
+
 
     <build>
         <plugins>
