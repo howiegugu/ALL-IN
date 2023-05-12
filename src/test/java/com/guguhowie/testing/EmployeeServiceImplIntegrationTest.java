@@ -116,6 +116,7 @@ public class EmployeeServiceImplIntegrationTest {
     }
 
     private void verifyFindByIdIsCalledOnce() {
+        // 验证特定行为至少发生一次/确切次数/从不
         Mockito.verify(employeeRepository, VerificationModeFactory.times(1)).findById(Mockito.anyLong());
         Mockito.reset(employeeRepository);
     }
