@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.guguhowie</groupId>
+    <artifactId>ALL-IN</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>ALL-IN</name>
+    <!-- FIXME change it to the project's website -->
+    <url>http://www.example.com</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.0</version>
+    </parent>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+<!--        junit-vintage-engine 是JUnit 5中的一个测试引擎，它的作用是为了向后兼容JUnit 4和JUnit 3中的测试代码。
+当您在使用JUnit 5时，如果您的测试代码仍然是使用旧版JUnit编写的（即JUnit 4或JUnit 3），则您可以使用 junit-vintage-engine 测试引擎来运行这些测试代码。-->
+
+<!--        junit-vintage-engine 与JUnit Jupiter测试引擎一起提供。
+JUnit Jupiter测试引擎用于运行JUnit 5中的新测试代码，而 junit-vintage-engine 用于运行旧版本的JUnit测试代码。-->
+
+<!--        使用 junit-vintage-engine 测试引擎，您可以在JUnit 5中
+运行传统的JUnit 4和JUnit 3测试，并且可以利用JUnit 5的新特性和功能，比如扩展模型和动态测试生成。-->
+
+
+<!-- Starting with Spring Boot 2.4, JUnit 5’s vintage engine has been removed
+ from spring-boot-starter-test-->
+        <dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.hamcrest</groupId>
+                    <artifactId>hamcrest-core</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+</project>
