@@ -43,4 +43,12 @@ public class Employee {
     public void setName(String name) {
         this.name = name;
     }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
 }

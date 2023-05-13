@@ -6,7 +6,8 @@ POST http://localhost:8080/api/employees
 Content-Type: application/json
 
 {
-  "name": "gugu"
+  "name": "gugu",
+  "birthday": "2011-10-10"
 }
 
 ###
