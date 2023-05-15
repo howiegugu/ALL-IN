@@ -22,6 +22,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 public class EmployeeServiceImplIntegrationTest {
 
+    // 如果我们不想启动完整的spring上下文，又想拥有依赖注入的能力，可以使用以下注解
     @TestConfiguration
     static class EmployeeServiceImplTestContextConfiguration {
         @Bean
@@ -33,6 +34,8 @@ public class EmployeeServiceImplIntegrationTest {
     @Autowired
     private EmployeeService employeeService;
 
+    //  It creates a Mock for the EmployeeRepository,
+    //  which can be used to bypass the call to the actual EmployeeRepository
     @MockBean
     private EmployeeRepository employeeRepository;
 
@@ -45,7 +48,7 @@ public class EmployeeServiceImplIntegrationTest {
         Employee alex = new Employee("alex");
 
         List<Employee> allEmployees = Arrays.asList(john, bob, alex);
-
+        // 定义mock对象的行为
         Mockito.when(employeeRepository.findByName(john.getName())).thenReturn(john);
         Mockito.when(employeeRepository.findByName(alex.getName())).thenReturn(alex);
         Mockito.when(employeeRepository.findByName("wrong_name")).thenReturn(null);

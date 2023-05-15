@@ -27,8 +27,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 
-
+// @RunWith(SpringRunner.class)在Spring Boot测试特性和JUnit之间架起了一座桥梁。
+// 每当我们在JUnit测试中使用任何Spring Boot测试功能时，都需要这个注释。
 @RunWith(SpringRunner.class)
+// Anotation that can be used for a Spring MVC test that focuses only on Spring MVC components.
+// 不必启动完整服务器 自动装配好mockmvc
 @WebMvcTest(value = EmployeeRestController.class, excludeAutoConfiguration = SecurityAutoConfiguration.class)
 public class EmployeeControllerIntegrationTest {
 

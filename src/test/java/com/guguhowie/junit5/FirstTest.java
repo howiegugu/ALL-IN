@@ -15,6 +15,9 @@ import static org.junit.jupiter.api.Assumptions.*;
 public class FirstTest {
 
 
+    /**
+     * note that the method with the @BeforeAll annotation needs to be static, otherwise the code won't compile.
+     */
     @BeforeAll
     static void setup() {
         log.info("@BeforeAll - executes once before all test methods in this class");
@@ -88,6 +91,21 @@ public class FirstTest {
         );
     }
 
+    @Test
+    void shouldThrowException() {
+        Throwable exception = assertThrows(UnsupportedOperationException.class, () -> {
+            throw new UnsupportedOperationException("Not supported");
+        });
+        assertEquals("Not supported", exception.getMessage());
+    }
+
+    @Test
+    void assertThrowsException() {
+        String str = null;
+        assertThrows(IllegalArgumentException.class, () -> {
+            Integer.valueOf(str);
+        });
+    }
 
     private List<String> in = new ArrayList<>(Arrays.asList("Hello", "Yes", "No"));
     private List<String> out = new ArrayList<>(Arrays.asList("Cześć", "Tak", "Nie"));

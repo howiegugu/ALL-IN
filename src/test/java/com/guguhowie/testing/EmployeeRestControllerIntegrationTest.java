@@ -30,6 +30,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @RunWith(SpringRunner.class)
+// creating the ApplicationContext that will be utilized in our tests.
+// when we need to bootstrap the entire container
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT, classes = Application.class)
 @AutoConfigureMockMvc
 @EnableAutoConfiguration(exclude=SecurityAutoConfiguration.class)
