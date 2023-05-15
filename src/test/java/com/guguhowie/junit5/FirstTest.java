@@ -84,7 +84,7 @@ public class FirstTest {
         String someString = "Just a string";
         assumingThat(
                 someString.equals("Just a string"),
-                () -> assertEquals(2 + 2, 6)
+                () -> assertEquals(2 + 2, 4)
         );
     }
 

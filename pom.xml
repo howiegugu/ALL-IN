@@ -50,7 +50,6 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <scope>test</scope>
         </dependency>
 
         <!--        junit-vintage-engine 是JUnit 5中的一个测试引擎，它的作用是为了向后兼容JUnit 4和JUnit 3中的测试代码。
@@ -88,7 +87,7 @@
         </dependency>
 
 
-<!--        使用junit 所需要引入的包-->
+        <!--        使用junit 所需要引入的包-->
 <!--        <dependency>-->
 <!--            <groupId>org.junit.jupiter</groupId>-->
 <!--            <artifactId>junit-jupiter-engine</artifactId>-->

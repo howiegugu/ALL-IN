@@ -6,7 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EnableJpaRepositories
+//@EnableJpaRepositories
 public class Application {
     private static ApplicationContext applicationContext;
 
